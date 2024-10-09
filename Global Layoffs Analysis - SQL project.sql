@@ -115,7 +115,7 @@ WHERE industry = '';
 
 
 -- Exploratory Data Analysis
--- In this case, the MAX(CAST columnname AS UNSIGNED) was necessary to get MYSQL to read the data as numbers rather than text.
+-- In this case, the (CAST columnname AS UNSIGNED) was necessary to get MYSQL to read the data as numbers rather than text.
 SELECT company, percentage_laid_off, MAX(CAST(total_laid_off AS UNSIGNED)) 
 FROM layoffs_staging2
 GROUP BY company,percentage_laid_off;
